@@ -11,39 +11,37 @@ on:
 
 
 jobs:
-   
-  build:
-    
-    runs-on: ubuntu-latest
+  terraform:
+  name: Terraform
+  runs-on: ubuntu-latest
 
     
-    steps:
+  steps:
       
-      - uses: actions/terraform@v3
-      - uses: hashicorp/setup-terraform@v2
+    - uses: actions/terraform@v3
+    - uses: hashicorp/setup-terraform@v2
 
-    steps: 
-      - name: Get credentials to access the aws
+  steps: 
+    - name: Get credentials to access the aws
        
       
-      with:
+    with:
 
-             AWS_Access_Key_Id : ASIAXWDRTCCOFXMEQ3YR
-             AWS_Secret_access_key: CHUnvY0aHiKwEJ42qX4hKKNgJeW1H69nvzTOqL87
-             AWS_session_token: IQoJb3JpZ2luX2VjEKT//////////wEaCXVzLXdlc3QtMiJGMEQCIGrA0umv2/hvJoALUbaWnhlmXvO120M7Jp/I9UqCombAAiBry/8yASd/GihPxrpRqqcsq83uanHVufsN0VFLKraHRiqhAwi9//////////8BEAAaDDUyODUxOTIwNTAyMCIMJxla0wJczCHU+WWCKvUCNDVLrDWhNlL7Xx7eYaOidOrPbUkHzaKkTB2sQ7wVc2ZZZYad8umSV6/WO2UkunCaPAGyZn08kRJBi53F789D3qa5bmihaWG3Z2cBV5KHuFzml1AG0+uF9Sf4nK7hX/lSZHziJHfLGAIDPBiRHOPx7zYHvIr0mKeUX0N4wC2hI21ohZJ7QwRqxQy4HKbIv5DyycF3RJqfha4Spwn+CxyZxVr1zkk/X+Q3sG4VOvGb2FZ1ya1sWwCqylp2+lyCn94lJ81YyW1ocev1oCHcmYHCpeESKzh2D2zo+FHCJFscXhpUejWc/z6vi0FD7YAWw8fwvihE5m1y4JR66iudMxNIW+iFs/ARw336Rr6cK+nmjzWoj3sUtP3ZBhsvzRQrJeTMps44ztJC6Doss3PH7cRkdE/AfFHQRIsptugN16DS4xJh0mi3n5cy7yV5rHitv836hYMfV1TmG7zndZ8E9gzeGfd+TxR+7gB6yHorZrhWjXUKJNGWZzDUkeGVBjqnAa7TpyfD+7sgKjDgos5WblMzrCCBjbVV9bTrnQFLOs/KcIjaSdQcgtqNjOwxUGSszG7f57/uP4oFFCMyzuyvmAgMcxisCV8PkhRA07QJPJjgcNoCXRNaMvcs1ttxV/LVOJnGKOx+CdpyVJ2ctvsmq9ipEB5RQWNF87RwI1BYw1hN/tNXMEHCStsGztsNXjB8/KyOGwnnKc8tqor/QDm5yiSIfArc855z
+      AWS_Access_Key_Id : ASIAXWDRTCCOFXMEQ3YR
+      AWS_Secret_access_key: CHUnvY0aHiKwEJ42qX4hKKNgJeW1H69nvzTOqL87
+      AWS_session_token: IQoJb3JpZ2luX2VjEKT//////////wEaCXVzLXdlc3QtMiJGMEQCIGrA0umv2/hvJoALUbaWnhlmXvO120M7Jp/I9UqCombAAiBry/8yASd/GihPxrpRqqcsq83uanHVufsN0VFLKraHRiqhAwi9//////////8BEAAaDDUyODUxOTIwNTAyMCIMJxla0wJczCHU+WWCKvUCNDVLrDWhNlL7Xx7eYaOidOrPbUkHzaKkTB2sQ7wVc2ZZZYad8umSV6/WO2UkunCaPAGyZn08kRJBi53F789D3qa5bmihaWG3Z2cBV5KHuFzml1AG0+uF9Sf4nK7hX/lSZHziJHfLGAIDPBiRHOPx7zYHvIr0mKeUX0N4wC2hI21ohZJ7QwRqxQy4HKbIv5DyycF3RJqfha4Spwn+CxyZxVr1zkk/X+Q3sG4VOvGb2FZ1ya1sWwCqylp2+lyCn94lJ81YyW1ocev1oCHcmYHCpeESKzh2D2zo+FHCJFscXhpUejWc/z6vi0FD7YAWw8fwvihE5m1y4JR66iudMxNIW+iFs/ARw336Rr6cK+nmjzWoj3sUtP3ZBhsvzRQrJeTMps44ztJC6Doss3PH7cRkdE/AfFHQRIsptugN16DS4xJh0mi3n5cy7yV5rHitv836hYMfV1TmG7zndZ8E9gzeGfd+TxR+7gB6yHorZrhWjXUKJNGWZzDUkeGVBjqnAa7TpyfD+7sgKjDgos5WblMzrCCBjbVV9bTrnQFLOs/KcIjaSdQcgtqNjOwxUGSszG7f57/uP4oFFCMyzuyvmAgMcxisCV8PkhRA07QJPJjgcNoCXRNaMvcs1ttxV/LVOJnGKOx+CdpyVJ2ctvsmq9ipEB5RQWNF87RwI1BYw1hN/tNXMEHCStsGztsNXjB8/KyOGwnnKc8tqor/QDm5yiSIfArc855z
 
-    steps:
-      - uses: hashicorp/setup-terraform@v2
+  steps:
+    - uses: hashicorp/setup-terraform@v2
+    - run: terraform init
+    - id: plan
+      run: terraform plan
 
-      - run: terraform init
-      - id: plan
-        run: terraform plan
-
-      - name: Run a one-line script
-        run: echo Hello, world!
+    - name: Run a one-line script
+      run: echo Hello, world!
 
        
-      - name: Run a multi-line script
-        run: |
+    - name: Run a multi-line script
+      run: |
           echo Add other actions to build,
           echo test, and deploy your project.
