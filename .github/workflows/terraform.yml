@@ -23,7 +23,7 @@ jobs:
       - uses: hashicorp/setup-terraform@v2
 
     steps: 
-      -name: Get credentials to access the aws
+      - name: Get credentials to access the aws
        
       
       with:
