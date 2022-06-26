@@ -24,7 +24,7 @@ jobs:
     - uses: hashicorp/setup-terraform@v2
      
     - name: Configure AWS Credentials
-      uses: aws-action/configure-aws-credentials@v1
+    - uses: aws-action/configure-aws-credentials@v1
       with:
         AWS_Access_Key_Id : ASIAXWDRTCCOFXMEQ3YR
         AWS_Secret_access_key: CHUnvY0aHiKwEJ42qX4hKKNgJeW1H69nvzTOqL87
