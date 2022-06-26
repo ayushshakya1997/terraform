@@ -17,7 +17,7 @@ env:
   
 jobs:
   
-    runs-on: ubuntu-latest
+  runs-on: ubuntu-latest
 
     steps:
         terraform:
@@ -36,7 +36,7 @@ jobs:
         run: terraform init
         - id: plan
         run: terraform plan
-        
+
           echo $message
           echo test, and deploy your project.
 
