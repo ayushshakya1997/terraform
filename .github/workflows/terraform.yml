@@ -26,7 +26,7 @@ jobs:
       -name: Get credentials to access the aws
        
       
-        with:
+      with:
 
              AWS_Access_Key_Id : ASIAXWDRTCCOFXMEQ3YR
              AWS_Secret_access_key: CHUnvY0aHiKwEJ42qX4hKKNgJeW1H69nvzTOqL87
