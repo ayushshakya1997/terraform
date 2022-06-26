@@ -19,8 +19,8 @@ jobs:
   
   runs-on: ubuntu-latest
 
-    steps:
-        terraform:
+  steps:
+    terraform:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/terraform@v3
       - uses: hashicorp/setup-terraform@v2
