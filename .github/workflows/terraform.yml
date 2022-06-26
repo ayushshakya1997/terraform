@@ -23,7 +23,7 @@ jobs:
       - uses: hashicorp/setup-terraform@v2
 
     steps: Get credentials to access the aws
-      - uses: hashicorp/setup-terraform@v2
+      
         with:
              AWS_Access_Key_Id : ASIAXWDRTCCOFXMEQ3YR
              AWS_Secret_access_key: CHUnvY0aHiKwEJ42qX4hKKNgJeW1H69nvzTOqL87
@@ -35,7 +35,7 @@ jobs:
       - run: terraform init
       - id: plan
         run: terraform plan
-          
+
       - name: Run a one-line script
         run: echo Hello, world!
 
