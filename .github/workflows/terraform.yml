@@ -24,6 +24,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/terraform@v3
       - uses: hashicorp/setup-terraform@v2
+     
       - name: Get Credentials to access the aws
         with:
         AWS_Access_Key_Id : ASIAXWDRTCCOFXMEQ3YR
