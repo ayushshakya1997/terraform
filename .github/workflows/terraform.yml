@@ -19,9 +19,7 @@ jobs:
     steps:
       - name: Setup AWS Credentials
         uses: aws-action/configure-aws-credentials@v1
-        with:
-          
-          
+        with:     
           
           AWS_Access_Key_Id : ${{ secrets.AWS_Access_Key_Id}}
           AWS_Secret_access_key:  ${{ secrets.AWS_Secret_access_key}}
