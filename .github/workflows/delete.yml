@@ -46,19 +46,15 @@ jobs:
 
              
     
-      - name: tf-plan
-        id: plan
-        run:  terraform plan
+      # - name: tf-plan
+      #   id: plan
+      #   run:  terraform plan
 
-      - name: tf-apply
-        id: apply
-        run:  terraform apply -auto-approve
-
-
-      # - name: tf-destroy
-      #   id: destroy
-      #   run: terraform destroy -auto-approve
+      # - name: tf-apply
+      #   id: apply
+      #   run:  terraform apply -auto-approve
 
 
-          
-
+      - name: tf-destroy
+        id: destroy
+        run: terraform destroy -auto-approve
