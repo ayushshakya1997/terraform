@@ -17,12 +17,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v3
+      - uses: hashicorp/setup-terraform@v2
+
       - name: Setup AWS Credentials
         uses: aws-action/configure-aws-credentials@v1
         with:     
           
           AWS_Access_Key_Id : ${{ secrets.AWS_ACCESS_KEY_ID}}
-          AWS_Secret_access_key:  ${{ secrets.AWS_SECRET_ACCESS_KEY}}
+          AWS_Secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
           AWS_session_token: ${{ secrets.AWS_SESSION_TOKEN}}
           
           # aws_access_key_id: ASIAXWDRTCCOLXMWINW4
