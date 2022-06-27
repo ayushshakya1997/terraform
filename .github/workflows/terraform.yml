@@ -36,6 +36,7 @@ jobs:
 
 
       - name: tf-init
+        id: init
         run: terraform init 
              terraform init -reconfigure
             -backend-config="bucket=$BUCKET" 
@@ -46,9 +47,11 @@ jobs:
              
     
       - name: tf-plan
+        id: plan
         run:  terraform plan
 
       - name: tf-apply
+        id: apply
         run:  terraform apply -auto-approve
 
 
