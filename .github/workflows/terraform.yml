@@ -21,13 +21,13 @@ jobs:
         uses: aws-action/configure-aws-credentials@v1
         with:     
           
-          # AWS_Access_Key_Id : ${{ secrets.AWS_Access_Key_Id}}
-          # AWS_Secret_access_key:  ${{ secrets.AWS_Secret_access_key}}
-          # AWS_session_token: ${{ secrets.AWS_session_token}}
+          AWS_Access_Key_Id : ${{ secrets.AWS_Access_Key_Id}}
+          AWS_Secret_access_key:  ${{ secrets.AWS_Secret_access_key}}
+          AWS_session_token: ${{ secrets.AWS_session_token}}
           
-          aws_access_key_id: ASIAXWDRTCCOLXMWINW4
-          aws_secret_access_key: Gfmx/ziNjyAxGJGlAbxhDPnOPNR7AifEVaagOltt
-          aws_session_token: IQoJb3JpZ2luX2VjELv//////////wEaCXVzLXdlc3QtMiJHMEUCIQCUGOpHQydHN2T8ZpU1Vf1HBIxkrb+wecW91cZ2p2p/LQIgU7E/dKCv6hV6CZ8D3Pjh1UVOjPK5d4YsNmfpWF47G2oqoQMI1P//////////ARAAGgw1Mjg1MTkyMDUwMjAiDOqmyKY3bEqnHyku6yr1AsnR4vZt7YdrcUJxZp0xRsoeQQLyrxpZ3TnyZXBexX9JsvBGNAhWdh0QrfACVPvVjvd3sFaWzDhoL5vlcSfaQ5wT9Nr3+97na5IqWQa7pPGqgd8oJea6XD8QGTYWtz116IL3Tpux2Hlhr1chlxKMC1hbGy6YLAmhy85uQ0R5iW9UtvYACIxMPf0ydRoXAf+98TeQink/O/tFFoQOGlguIRBktta01Ui3zPCjpQsYlHVn8xiPVctPU1wurB/NBziZEdl1TTWF1gNd6XyYQ59JVosn+jKxhyVARBZ0GB3eDe4rCnwvY4wA/Iq5g3zuS6v80OqZDRPPv3g8iaGUyY8Xqh/BiFnxWSAflxfp/51Bz7yzmuY2ugL5v2Feot9o6CuyK9XWOmouLcN4yLt+1sdZW3Ghe2f955hB15pD8zYDtxQzHOsPGTh8rY5qXndKSjNfbopDFxOAuYc/hvHvBMSMBvowTbpoRHbjxU2je6Ys7NI+x7rgMSUwmaDmlQY6pgEwheeQQTi4tsrD3RVgSEvKVtY77LxHhKhtfuybkN35uAJf0QLC1r7k7UXafBQsnt3uuyZH7nzg0NK19AXkftIav0t498pRuaQSo9BQUc1UYxgdFYlMTXio4NP+TRVSP9HUFQVqEgmHLoO1cQtgvtGgpmgu4YD3I2cBjo2cFtRHoY+3l5E3h7+VJePx1uitwbGouhIbhQKlejJ/eabmtuSMjSxx3avH
+          # aws_access_key_id: ASIAXWDRTCCOLXMWINW4
+          # aws_secret_access_key: Gfmx/ziNjyAxGJGlAbxhDPnOPNR7AifEVaagOltt
+          # aws_session_token: IQoJb3JpZ2luX2VjELv//////////wEaCXVzLXdlc3QtMiJHMEUCIQCUGOpHQydHN2T8ZpU1Vf1HBIxkrb+wecW91cZ2p2p/LQIgU7E/dKCv6hV6CZ8D3Pjh1UVOjPK5d4YsNmfpWF47G2oqoQMI1P//////////ARAAGgw1Mjg1MTkyMDUwMjAiDOqmyKY3bEqnHyku6yr1AsnR4vZt7YdrcUJxZp0xRsoeQQLyrxpZ3TnyZXBexX9JsvBGNAhWdh0QrfACVPvVjvd3sFaWzDhoL5vlcSfaQ5wT9Nr3+97na5IqWQa7pPGqgd8oJea6XD8QGTYWtz116IL3Tpux2Hlhr1chlxKMC1hbGy6YLAmhy85uQ0R5iW9UtvYACIxMPf0ydRoXAf+98TeQink/O/tFFoQOGlguIRBktta01Ui3zPCjpQsYlHVn8xiPVctPU1wurB/NBziZEdl1TTWF1gNd6XyYQ59JVosn+jKxhyVARBZ0GB3eDe4rCnwvY4wA/Iq5g3zuS6v80OqZDRPPv3g8iaGUyY8Xqh/BiFnxWSAflxfp/51Bz7yzmuY2ugL5v2Feot9o6CuyK9XWOmouLcN4yLt+1sdZW3Ghe2f955hB15pD8zYDtxQzHOsPGTh8rY5qXndKSjNfbopDFxOAuYc/hvHvBMSMBvowTbpoRHbjxU2je6Ys7NI+x7rgMSUwmaDmlQY6pgEwheeQQTi4tsrD3RVgSEvKVtY77LxHhKhtfuybkN35uAJf0QLC1r7k7UXafBQsnt3uuyZH7nzg0NK19AXkftIav0t498pRuaQSo9BQUc1UYxgdFYlMTXio4NP+TRVSP9HUFQVqEgmHLoO1cQtgvtGgpmgu4YD3I2cBjo2cFtRHoY+3l5E3h7+VJePx1uitwbGouhIbhQKlejJ/eabmtuSMjSxx3avH
           AWS_Region: us-east-1
 
       - name: Terraform Init
