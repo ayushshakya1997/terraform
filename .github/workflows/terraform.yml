@@ -55,5 +55,10 @@ jobs:
         run:  terraform apply -auto-approve
 
 
+      -name: tf-destroy
+       id: destroy
+       run: terraform destroy -auto-approve
+
+
           
 
