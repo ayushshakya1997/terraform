@@ -1,6 +1,5 @@
 #creating user 
 resource "aws_iam_user" "user"{
-count = 3
 name = var.name
 
 }
