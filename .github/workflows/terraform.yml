@@ -34,13 +34,13 @@ jobs:
           aws-region: us-east-1
 
       - name: tf-init
-        run: terraform init
+        run:  init
     
       - name: tf plan
-        run:  terraform plan
+        run:   plan
 
       - name: tf apply
-        run: terraform apply -auto-approve
+        run:  apply -auto-approve
 
 
           
