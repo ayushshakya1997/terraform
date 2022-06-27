@@ -8,8 +8,8 @@ on:
   #   branches: [ "main" ]
 
 env:
-  BUCKET: bimal-Backend-buket
-  TFSTATE_FILE: bimal.tfstate
+  BUCKET: bimal-bucket1
+  TFSTATE_FILE: terraform.tfstate
   DB_TABLE: bimal-table
   
   
