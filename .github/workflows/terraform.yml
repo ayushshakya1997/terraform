@@ -8,7 +8,9 @@ on:
   #   branches: [ "main" ]
 
 env:
-  name: Terraform
+  BUCKET: bimal-Backend-buket
+  TFSTATE_FILE: bimal.tfstate
+  DB_TABLE: bimal-table
   
   
 jobs:
