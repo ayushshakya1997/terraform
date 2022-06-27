@@ -1,7 +1,7 @@
 module "IAM_module" {
   source   = "../resource"
   for_each = var.terraform
-  name     = each.value.user_name
+  name     = each.key
 #   ami=  each.key.user_ami
   # region=var.awsregion
   tag-key = each.value.role_tag-key

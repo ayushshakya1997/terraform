@@ -8,7 +8,7 @@ name = var.name
 # creating iam role
 
 resource "aws_iam_role" "user_role" {
-  name = "user_role"
+
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
@@ -32,7 +32,7 @@ resource "aws_iam_role" "user_role" {
 
 #creating Iam Policy
 resource "aws_iam_policy" "user_policy" { 
-  name        = "user_policy"
+  
   path        = var.path
   description = var.description
 
