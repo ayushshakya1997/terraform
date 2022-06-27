@@ -1,6 +1,6 @@
 terraform = {
   0 = {
-    "user_name" = "bimal"
+    
     # aws_region="us-east-1"
     "role_action" = "sts:AssumeRole"
     "role_Effect" = "Allow"
@@ -18,7 +18,7 @@ terraform = {
 
   rohit = {
 
-    "user_name" = "bimal"
+   
     # aws_region="us-east-1"
     "role_action" = "sts:AssumeRole"
     "role_Effect" = "Allow"
